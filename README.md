@@ -10,7 +10,7 @@ Graag gebruik maken van de volgende conventies:
 # het klaarzetten van het project
 
 clone het project in je laragon folder.
-make een nieuwe laravel project.
+make een nieuwe laravel project genaamd covid19project.
 
 kopieer alle bestanden van de laravel project in je covid19project. (vervang geen bestanden)
 
