@@ -7,11 +7,11 @@ Graag gebruik maken van de volgende conventies:
 
 -functies, variabelen, klassen enzovoort graag in het Nederlands!
 
-# het klaarzetten van het project
+# Klaarzetten van het project
 
 clone het project in je laragon folder.
-make een nieuwe laravel project genaamd covid19project.
+maak een nieuw laravel project genaamd covid19project.
 
-kopieer alle bestanden van de laravel project in je covid19project. (vervang geen bestanden)
+kopieer alle bestanden van het laravel project in je covid19project. (vervang geen bestanden)
 
-als alles goed is gegaan kun je nu de project bekijken in je browser
+Als alles goed is gegaan, kun je nu het project bekijken in je browser.
