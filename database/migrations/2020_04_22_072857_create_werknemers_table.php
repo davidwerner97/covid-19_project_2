@@ -14,17 +14,17 @@ class CreateWerknemersTable extends Migration
     public function up()
     {
         Schema::create('werknemers', function (Blueprint $table) {
-            $table->increments("werknemer_id");
-            $table->string("werknemer_vnaam");
-            $table->string("werknemer_anaam");
-            $table->string("werknemer_plaats");
-            $table->string("werknemer_postcode");
-            $table->string("werknemer_hnummer");
-            $table->string("werknemer_straat");
-            $table->string("werknemer_telnummer");
-            $table->string("werknemer_functie");
+            $table->increments("id");
+            $table->string("vnaam");
+            $table->string("anaam");
+            $table->string("plaats");
+            $table->string("postcode");
+            $table->string("hnummer");
+            $table->string("straat");
+            $table->string("telnummer");
+            $table->string("functie");
             $table->integer("bedrijf_id")->unsigned();
-            $table->foreign("bedrijf_id")->references("bedrijf_id")->on("bedrijfs");
+            $table->foreign("bedrijf_id")->references("id")->on("bedrijf");
             $table->timestamps();
         });
     }
