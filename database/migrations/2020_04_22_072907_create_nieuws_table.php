@@ -14,10 +14,10 @@ class CreateNieuwsTable extends Migration
     public function up()
     {
         Schema::create('nieuws', function (Blueprint $table) {
-            $table->id('nieuws_id');
-            $table->string('nieuws_titel');
-            $table->string('nieuws_inhoud');
-            $table->date('nieuws_datum');
+            $table->id('id');
+            $table->string('titel');
+            $table->string('inhoud');
+            $table->date('datum');
             $table->timestamps();
         });
     }

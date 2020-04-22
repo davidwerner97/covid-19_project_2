@@ -14,9 +14,9 @@ class CreateStatusTable extends Migration
     public function up()
     {
         Schema::create('status', function (Blueprint $table) {
-            $table->increments('status_id');
-            $table->string('status_titel');
-            $table->text('status_beschrijving');
+            $table->increments('id');
+            $table->string('titel');
+            $table->text('beschrijving');
             $table->timestamp('datum');
             $table->integer("werknemer_id")->unsigned();
             $table->foreign("werknemer_id")->references("id")->on("werknemer");
