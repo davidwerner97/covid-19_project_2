@@ -19,7 +19,7 @@ class CreateStatusTable extends Migration
             $table->text('beschrijving');
             $table->timestamp('datum');
             $table->integer("werknemer_id")->unsigned();
-            $table->foreign("werknemer_id")->references("id")->on("werknemer");
+            $table->foreign("werknemer_id")->references("id")->on("werknemers");
             $table->timestamps();
         });
     }

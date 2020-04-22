@@ -18,6 +18,8 @@ class CreateNieuwsTable extends Migration
             $table->string('titel');
             $table->string('inhoud');
             $table->date('datum');
+            $table->integer("bedrijf_id")->unsigned();
+            $table->foreign("bedrijf_id")->references("id")->on("bedrijf");
             $table->timestamps();
         });
     }
