@@ -26,3 +26,6 @@ Route::put('/status/{status}', 'StatusesController@update')->named('status.updat
 Route::get('/werknemer/','WerknemersController@index')->name('werknemer.index');
 Route::get('/werknemer/create','WerknemersController@create')->name('werknemer.create');
 Route::get('/werknemer/{Werknemer}/','WerknemersController@show')->name('werknemer.show');
+
+// Artikelen routes
+Route::get('/artikelen', 'ArtikelenController@index')->name('artikelen.index');
