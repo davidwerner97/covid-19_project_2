@@ -13,6 +13,8 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', function () {
-    return view('welcome');
-});
+Route::get('/', 'StatusesController@index')->named('status.index');
+Route::post('/status', 'StatusesController@store')->named('status.store');
+Route::get('/status/create', 'StatusesController@create')->named('status.create');
+Route::get('/status/{status}/edit', 'StatusesController@edit')->named('status.edit');
+Route::put('/status/{status}', 'StatusesController@update')->named('status.update');
