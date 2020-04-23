@@ -8,8 +8,6 @@
         <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
 </head>
 <body id="page-top">
-<div class="container-fluid">
     @yield("inhoud")
-</div>
 </body>
 </html>
