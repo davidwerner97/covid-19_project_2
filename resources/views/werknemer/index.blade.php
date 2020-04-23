@@ -1,4 +1,4 @@
-@extends('temptemplate')
+@extends('layout')
 @section('head')
     <style>
         .cards {
