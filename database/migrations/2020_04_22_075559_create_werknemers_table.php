@@ -24,7 +24,7 @@ class CreateWerknemersTable extends Migration
             $table->text("telnummer");
             $table->text("functie");
             $table->integer("bedrijf_id")->unsigned();
-            $table->foreign("bedrijf_id")->references("id")->on("bedrijf");
+            $table->foreign("bedrijf_id")->references("id")->on("bedrijven");
             $table->timestamps();
         });
     }
