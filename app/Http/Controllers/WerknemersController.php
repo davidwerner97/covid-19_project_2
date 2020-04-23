@@ -17,7 +17,7 @@ class WerknemersController extends Controller
     public function show($id){
         //laat informatie van 1 werknemer zien
         $werknemer = Werknemer::find($id);
-        return view('werknemers.show',["werknemer" => $werknemer]);
+        return view('werknemer.show',["werknemer" => $werknemer]);
     }
 
     public function create(){

@@ -16,5 +16,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
-
+//werknemer routes
 Route::get('/werknemer/','WerknemersController@index')->name('werknemer.index');
+Route::get('/werknemer/create','WerknemersController@create')->name('werknemer.create');
+Route::get('/werknemer/{Werknemer}/','WerknemersController@show')->name('werknemer.show');
