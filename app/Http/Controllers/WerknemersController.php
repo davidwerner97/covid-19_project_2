@@ -24,10 +24,11 @@ class WerknemersController extends Controller
         //laat view zien om een werknemer aan te maken
         return view('werknemer.create');
     }
-    public function store(){
+    public function store(Werknemer $werknemer){
         //sla hem op
-        Werknemer::create($this->validateWerknemer());
-        return redirect(route('werknemer.store'));
+        Werknemer::create(request()->validateWerknemer());
+        var_dump('');
+//        return redirect();
     }
     public function edit(Werknemer $werknemer){
         //laat view zien om werknemer te bewerken
