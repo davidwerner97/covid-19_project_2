@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateWerknemersTable extends Migration
+class CreateNieuwsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,16 +13,11 @@ class CreateWerknemersTable extends Migration
      */
     public function up()
     {
-        Schema::create('werknemers', function (Blueprint $table) {
-            $table->increments("id");
-            $table->text("vnaam");
-            $table->text("anaam");
-            $table->text("plaats");
-            $table->text("postcode");
-            $table->text("hnummer");
-            $table->text("straat");
-            $table->text("telnummer");
-            $table->text("functie");
+        Schema::create('nieuws', function (Blueprint $table) {
+            $table->id('id');
+            $table->string('titel');
+            $table->string('inhoud');
+            $table->date('datum');
             $table->integer("bedrijf_id")->unsigned();
             $table->foreign("bedrijf_id")->references("id")->on("bedrijf");
             $table->timestamps();
@@ -36,6 +31,6 @@ class CreateWerknemersTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('werknemers');
+        Schema::dropIfExists('nieuws');
     }
 }
