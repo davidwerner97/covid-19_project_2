@@ -15,14 +15,14 @@ class CreateWerknemersTable extends Migration
     {
         Schema::create('werknemers', function (Blueprint $table) {
             $table->increments("id");
-            $table->string("vnaam");
-            $table->string("anaam");
-            $table->string("plaats");
-            $table->string("postcode");
-            $table->string("hnummer");
-            $table->string("straat");
-            $table->string("telnummer");
-            $table->string("functie");
+            $table->text("vnaam");
+            $table->text("anaam");
+            $table->text("plaats");
+            $table->text("postcode");
+            $table->text("hnummer");
+            $table->text("straat");
+            $table->text("telnummer");
+            $table->text("functie");
             $table->integer("bedrijf_id")->unsigned();
             $table->foreign("bedrijf_id")->references("id")->on("bedrijf");
             $table->timestamps();
