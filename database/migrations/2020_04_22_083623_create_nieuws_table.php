@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateStatusTable extends Migration
+class CreateNieuwsTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,13 @@ class CreateStatusTable extends Migration
      */
     public function up()
     {
-        Schema::create('status', function (Blueprint $table) {
-            $table->increments('id');
+        Schema::create('nieuws', function (Blueprint $table) {
+            $table->id('id');
             $table->string('titel');
-            $table->text('beschrijving');
-            $table->timestamp('datum');
-            $table->integer("werknemer_id")->unsigned();
-            $table->foreign("werknemer_id")->references("id")->on("werknemers");
+            $table->string('inhoud');
+            $table->date('datum');
+            $table->integer("bedrijf_id")->unsigned();
+            $table->foreign("bedrijf_id")->references("id")->on("bedrijf");
             $table->timestamps();
         });
     }
@@ -31,6 +31,6 @@ class CreateStatusTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('status');
+        Schema::dropIfExists('nieuws');
     }
 }

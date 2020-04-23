@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateStatusTable extends Migration
+class CreateBedrijvenTable extends Migration
 {
     /**
      * Run the migrations.
@@ -13,13 +13,14 @@ class CreateStatusTable extends Migration
      */
     public function up()
     {
-        Schema::create('status', function (Blueprint $table) {
+        Schema::create('bedrijven', function (Blueprint $table) {
             $table->increments('id');
-            $table->string('titel');
-            $table->text('beschrijving');
-            $table->timestamp('datum');
-            $table->integer("werknemer_id")->unsigned();
-            $table->foreign("werknemer_id")->references("id")->on("werknemers");
+            $table->string('naam');
+            $table->string('plaats');
+            $table->string('postcode');
+            $table->string('hnummer');
+            $table->string('straat');
+            $table->string('telnummer');
             $table->timestamps();
         });
     }
@@ -31,6 +32,6 @@ class CreateStatusTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('status');
+        Schema::dropIfExists('bedrijven');
     }
 }
