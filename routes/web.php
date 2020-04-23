@@ -12,10 +12,16 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-
 Route::get('/', function () {
     return view('welcome');
 });
+//status routes
+Route::get('/', 'StatusesController@index')->named('status.index');
+Route::post('/status', 'StatusesController@store')->named('status.store');
+Route::get('/status/create', 'StatusesController@create')->named('status.create');
+Route::get('/status/{status}/edit', 'StatusesController@edit')->named('status.edit');
+Route::put('/status/{status}', 'StatusesController@update')->named('status.update');
+
 //werknemer routes
 Route::get('/werknemer/','WerknemersController@index')->name('werknemer.index');
 Route::get('/werknemer/create','WerknemersController@create')->name('werknemer.create');
