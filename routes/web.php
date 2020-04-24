@@ -27,3 +27,6 @@ Route::get('/werknemer/','WerknemersController@index')->name('werknemer.index');
 Route::post('/werknemer/', 'WerknemersController@store')->name('werknemer.store');
 Route::get('/werknemer/create','WerknemersController@create')->name('werknemer.create');
 Route::get('/werknemer/{Werknemer}/','WerknemersController@show')->name('werknemer.show');
+
+//bedrijf routes
+
