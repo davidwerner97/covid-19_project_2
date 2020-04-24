@@ -13,13 +13,13 @@ class CreateArtikelenTable extends Migration
      */
     public function up()
     {
-        Schema::create('artikelen', function (Blueprint $table) {
+        Schema::create('artikels', function (Blueprint $table) {
             $table->id();
             $table->string('titel');
             $table->text('inhoud');
             $table->date('datum');
             $table->integer("bedrijf_id")->unsigned();
-            $table->foreign("bedrijf_id")->references("id")->on("bedrijf");
+            $table->foreign("bedrijf_id")->references("id")->on("bedrijven");
             $table->timestamps();
         });
     }
@@ -31,6 +31,6 @@ class CreateArtikelenTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('artikelen');
+        Schema::dropIfExists('artikels');
     }
 }
