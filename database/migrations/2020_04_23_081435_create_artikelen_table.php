@@ -19,7 +19,7 @@ class CreateArtikelenTable extends Migration
             $table->text('inhoud');
             $table->date('datum');
             $table->integer("bedrijf_id")->unsigned();
-            $table->foreign("bedrijf_id")->references("id")->on("bedrijven");
+            $table->foreign("bedrijf_id")->references("id")->on("bedrijfs");
             $table->timestamps();
         });
     }

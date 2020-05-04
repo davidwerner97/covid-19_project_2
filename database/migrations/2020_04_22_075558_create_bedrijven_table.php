@@ -13,7 +13,7 @@ class CreateBedrijvenTable extends Migration
      */
     public function up()
     {
-        Schema::create('bedrijven', function (Blueprint $table) {
+        Schema::create('bedrijfs', function (Blueprint $table) {
             $table->increments('id');
             $table->string('naam');
             $table->string('plaats');
