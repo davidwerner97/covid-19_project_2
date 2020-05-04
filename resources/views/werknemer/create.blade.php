@@ -94,12 +94,24 @@
                     @enderror
                 </div>
             </div>
-            <input list="bedrijf_id" name="bedrijven">
-            @foreach($bedrijven as $key=>$value)
-                <datalist id="bedrijf">
-                    <option value="{{$key}}">{{$value}}</option>
-                </datalist>
-            @endforeach
+
+            <div class="field">
+                <label class="label" for="bedrijf_id">bedrijf</label>
+                <div class="control">
+                    <input class="input @error('bedrijf_id') is-danger @enderror" type="text" list="bedrijven" name="bedrijf_id" id="bedrijf_id" value="{{old('bedrijf_id')}}">
+                    <datalist id="bedrijven">
+                        @foreach($bedrijven as $key=>$value)
+
+                            <option value="{{$key}}">{{$value}}</option>
+
+                        @endforeach
+                    </datalist>
+                    @error('bedrijf_id')
+                    <p class="alert is-danger">{{ $errors->first('bedrijf_id') }}</p>
+                    @enderror
+                </div>
+            </div>
+
             <br>
             <input type="submit">
 
