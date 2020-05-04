@@ -11,5 +11,11 @@ class Werknemer extends Model
     public function path(){
         return route('werknemer.show', $this);
     }
+    public function deletepath(){
+        return route('werknemer.delete', $this);
+    }
+    public function editpath(){
+        return route('werknemer.edit', $this);
+    }
     //
 }
