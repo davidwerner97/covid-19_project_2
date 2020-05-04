@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use Illuminate\Auth\Events\Validated;
 use Illuminate\Http\Request;
 use App\Werknemer;
+use App\Bedrijf;
 
 class WerknemersController extends Controller
 {
@@ -22,12 +23,15 @@ class WerknemersController extends Controller
 
     public function create(){
         //laat view zien om een werknemer aan te maken
-        return view('werknemer.create');
+        $bedrijven= Bedrijf::pluck('naam', 'id');
+        return view('werknemer.create',compact('bedrijven'));
     }
     public function store(Werknemer $werknemer){
         //sla hem op
-        Werknemer::create(request()->validateWerknemer());
-        var_dump('');
+        Werknemer::create($this->validateWerknemer());
+        $werknemers = Werknemer::latest()->get();
+
+        return view('werknemer.index',["werknemers" => $werknemers]);
 //        return redirect();
     }
     public function edit(Werknemer $werknemer){
