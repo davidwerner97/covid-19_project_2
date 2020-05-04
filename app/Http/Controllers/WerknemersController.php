@@ -6,7 +6,6 @@ use Illuminate\Auth\Events\Validated;
 use Illuminate\Http\Request;
 use App\Werknemer;
 use App\Bedrijf;
-use App\Status;
 
 class WerknemersController extends Controller
 {
@@ -25,7 +24,6 @@ class WerknemersController extends Controller
     public function create(){
         //laat view zien om een werknemer aan te maken
         $bedrijven= Bedrijf::pluck('naam', 'id');
-//        $statussen = Status::pluck('titel', 'id');
         return view('werknemer.create',compact('bedrijven'));
     }
     public function store(Werknemer $werknemer){
