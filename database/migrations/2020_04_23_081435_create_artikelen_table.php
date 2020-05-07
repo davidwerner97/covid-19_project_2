@@ -13,7 +13,7 @@ class CreateArtikelenTable extends Migration
      */
     public function up()
     {
-        Schema::create('artikelen', function (Blueprint $table) {
+        Schema::create('artikels', function (Blueprint $table) {
             $table->id();
             $table->string('titel');
             $table->text('inhoud');
@@ -31,6 +31,6 @@ class CreateArtikelenTable extends Migration
      */
     public function down()
     {
-        Schema::dropIfExists('artikelen');
+        Schema::dropIfExists('artikels');
     }
 }
