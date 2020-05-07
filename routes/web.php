@@ -26,7 +26,11 @@ Route::put('/status/{status}', 'StatusesController@update')->named('status.updat
 Route::get('/werknemer/','WerknemersController@index')->name('werknemer.index');
 Route::post('/werknemer/', 'WerknemersController@store')->name('werknemer.store');
 Route::get('/werknemer/create','WerknemersController@create')->name('werknemer.create');
+Route::get('/werknemer/{werknemer}/edit','WerknemersController@edit')->name('werknemer.edit');
+Route::get('/werknemer/{werknemer}/delete','WerknemersController@destroy')->name('werknemer.delete');
+Route::put('/werknemer/{werknemer}', 'WerknemersController@update')->name('werknemer.update');
 Route::get('/werknemer/{Werknemer}/','WerknemersController@show')->name('werknemer.show');
+
 
 //bedrijf routes
 Route::get('/bedrijf/{bedrijf}/edit','WerknemersController@edit')->name('bedrijven.edit');
