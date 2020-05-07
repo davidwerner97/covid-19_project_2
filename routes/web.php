@@ -37,6 +37,10 @@ Route::get('/artikelen', 'ArtikelenController@index')->name('artikelen.single');
 Route::post('/artikelen', 'ArtikelenController@store');
 Route::get('/artikelen/create', 'ArtikelenController@create')->name('artikelen.create');
 Route::get('/artikelen/{artikel}', 'ArtikelenController@show')->name('artikelen.single');
+Route::get('/artikelen/{artikel}/edit', 'ArtikelenController@edit')->name('artikelen.edit');
+Route::put('/artikelen/{artikel}', 'ArtikelenController@update');
+Route::delete('/artikelen/{artikel}/delete', 'ArtikelenController@destroy')->name('artikelen.delete');
+
 //bedrijf routes
 Route::get('/bedrijf/{bedrijf}/edit','WerknemersController@edit')->name('bedrijven.edit');
 Route::get('/bedrijf/{bedrijf}/delete','WerknemersController@destroy')->name('bedrijven.delete');

@@ -34,15 +34,15 @@
                         @enderror
 
                     </div>
-                    {{--<div class="form-group">
-                        Bedrijf_id:
+                    <div class="form-group">
+                        bedrijf_id:
                         <input type="text" class="form-control form-control-user @error('bedrijf_id') border-danger @enderror" name="bedrijf_id" value="{{ old('bedrijf_id') }}">
 
                         @error('bedrijf_id')
                         <p class="fieldError">{{ $errors->first('bedrijf_id') }}</p>
                         @enderror
 
-                    </div>--}}
+                    </div>
                     <button type="submit" class="btn btn-primary btn-user btn-block">Submit</button>
                 </form>
             </div>
