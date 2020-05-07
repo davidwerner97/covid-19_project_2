@@ -16,10 +16,6 @@ Route::get('/', function () {
     return view('welcome');
 });
 
-/*Route::get('/artikelen/create', function () {
-    return view('artikelen.create');
-});*/
-
 //status routes
 Route::get('/', 'StatusesController@index')->named('status.index');
 Route::post('/status', 'StatusesController@store')->named('status.store');
@@ -36,7 +32,7 @@ Route::get('/werknemer/{Werknemer}/','WerknemersController@show')->name('werknem
 
 // Artikelen routes
 Route::get('/artikelen', 'ArtikelenController@index')->name('artikelen.single');
-Route::get('/artikelen/create', 'ArtikelenController@create');
+Route::get('/artikelen/create', 'ArtikelenController@create')->name('artikelen.create');
 Route::get('/artikelen/{artikel}', 'ArtikelenController@show')->name('artikelen.single');
 //Route::post('/artikelen', 'ArtikelenController@store');
 
