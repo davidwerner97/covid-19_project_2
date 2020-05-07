@@ -32,9 +32,9 @@ Route::get('/werknemer/{Werknemer}/','WerknemersController@show')->name('werknem
 
 // Artikelen routes
 Route::get('/artikelen', 'ArtikelenController@index')->name('artikelen.single');
+Route::post('/artikelen', 'ArtikelenController@store');
 Route::get('/artikelen/create', 'ArtikelenController@create')->name('artikelen.create');
 Route::get('/artikelen/{artikel}', 'ArtikelenController@show')->name('artikelen.single');
-//Route::post('/artikelen', 'ArtikelenController@store');
 
 //bedrijf routes
 Route::get('/bedrijf/{bedrijf}/edit','WerknemersController@edit')->name('bedrijven.edit');

@@ -2,6 +2,9 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c0dd44e-5a88-4188-87c7-ec30a8829c7c" name="Default Changelist" comment="">
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/artikelen/create.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artikelen/create.blade.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/artikelen/single.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artikelen/single.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/routes/web.php" beforeDir="false" afterPath="$PROJECT_DIR$/routes/web.php" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
@@ -170,9 +173,9 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="276" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1587640349233" />
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1587713402190">
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1588837727391">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
-    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1587713402190" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588837727391" />
   </component>
 </project>
