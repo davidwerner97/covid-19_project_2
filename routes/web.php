@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 Route::get('/', function () {
     return view('welcome');
 });
+
 //status routes
 Route::get('/', 'StatusesController@index')->named('status.index');
 Route::post('/status', 'StatusesController@store')->named('status.store');
@@ -31,12 +32,15 @@ Route::get('/werknemer/{werknemer}/delete','WerknemersController@destroy')->name
 Route::put('/werknemer/{werknemer}', 'WerknemersController@update')->name('werknemer.update');
 Route::get('/werknemer/{Werknemer}/','WerknemersController@show')->name('werknemer.show');
 
-
+// Artikelen routes
+Route::get('/artikelen', 'ArtikelenController@index')->name('artikelen.single');
+Route::post('/artikelen', 'ArtikelenController@store');
+Route::get('/artikelen/create', 'ArtikelenController@create')->name('artikelen.create');
+Route::get('/artikelen/{artikel}', 'ArtikelenController@show')->name('artikelen.single');
 //bedrijf routes
 Route::get('/bedrijf/{bedrijf}/edit','WerknemersController@edit')->name('bedrijven.edit');
 Route::get('/bedrijf/{bedrijf}/delete','WerknemersController@destroy')->name('bedrijven.delete');
 Route::put('/bedrijf/{bedrijf}', 'WerknemersController@update')->name('bedrijven.update');
 Route::get('/bedrijf/{bedrijf}','WerknemersController@show')->name('bedrijven.show');
-
 
 
