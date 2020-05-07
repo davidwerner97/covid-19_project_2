@@ -1,4 +1,4 @@
-@extends('temptemplate')
+@extends('layout')
 @section('head')
     <style>
         .cards {
@@ -38,6 +38,7 @@
                         <div class="mdc-typography--headline9">{{$werknemer->plaats. ' ' . $werknemer->postcode}}</div>
                         <div class="mdc-typography--headline9">{{$werknemer->straat. ' ' . $werknemer->hnummer}}</div>
                         <div class="mdc-typography--headline9">{{$werknemer->telnummer}}</div>
+                        <a href="{{$werknemer->deletepath()}}">delete</a> <a href="{{$werknemer->editpath()}}">edit</a>
                     </div>
                 </div>
             </div>

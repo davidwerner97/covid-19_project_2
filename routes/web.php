@@ -24,8 +24,18 @@ Route::put('/status/{status}', 'StatusesController@update')->named('status.updat
 
 //werknemer routes
 Route::get('/werknemer/','WerknemersController@index')->name('werknemer.index');
+Route::post('/werknemer/', 'WerknemersController@store')->name('werknemer.store');
 Route::get('/werknemer/create','WerknemersController@create')->name('werknemer.create');
 Route::get('/werknemer/{Werknemer}/','WerknemersController@show')->name('werknemer.show');
 
+
 // Artikelen routes
 Route::get('/artikelen', 'ArtikelenController@index')->name('artikelen.index');
+
+//bedrijf routes
+Route::get('/bedrijf/{bedrijf}/edit','WerknemersController@edit')->name('bedrijven.edit');
+Route::get('/bedrijf/{bedrijf}/delete','WerknemersController@destroy')->name('bedrijven.delete');
+Route::put('/bedrijf/{bedrijf}', 'WerknemersController@update')->name('bedrijven.update');
+Route::get('/bedrijf/{bedrijf}','WerknemersController@show')->name('bedrijven.show');
+
+
