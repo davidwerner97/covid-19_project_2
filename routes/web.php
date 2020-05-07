@@ -29,10 +29,12 @@ Route::get('/werknemer/create','WerknemersController@create')->name('werknemer.c
 Route::get('/werknemer/{Werknemer}/','WerknemersController@show')->name('werknemer.show');
 
 //bedrijf routes
-Route::get('/bedrijf/{bedrijf}/edit','WerknemersController@edit')->name('bedrijven.edit');
-Route::get('/bedrijf/{bedrijf}/delete','WerknemersController@destroy')->name('bedrijven.delete');
+Route::get('/bedrijf/','WerknemersController@edit')->name('bedrijven.edit');
+Route::get('/bedrijf/{bedrijf}','WerknemersController@destroy')->name('bedrijven.delete');
+Route::get('/bedrijf/create','WerknemersController@create')->name('bedrijven.create');
 Route::put('/bedrijf/{bedrijf}', 'WerknemersController@update')->name('bedrijven.update');
 Route::get('/bedrijf/{bedrijf}','WerknemersController@show')->name('bedrijven.show');
+
 
 
 
