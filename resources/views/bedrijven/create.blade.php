@@ -18,7 +18,7 @@
                     <label class="label" for="status_titel">Naam</label>
 
                     <div class="control">
-                        <input class="input" type="text"  name="naam" id="naam" value="{{$bedrijf->status_titel}}">
+                        <input class="input" type="text"  name="naam" id="naam" value="{{$bedrijf->naam}}">
                     </div>
                 </div>
 
