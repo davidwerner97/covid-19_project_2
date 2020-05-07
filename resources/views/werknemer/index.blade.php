@@ -39,7 +39,8 @@
                                 <div class="mdc-typography--headline9">{{$werknemer->plaats. ' ' . $werknemer->postcode}}</div>
                                 <div class="mdc-typography--headline9">{{$werknemer->straat. ' ' . $werknemer->hnummer}}</div>
                                 <div class="mdc-typography--headline9">{{$werknemer->telnummer}}</div>
-                                <a href="{{$werknemer->path()}}">view</a> <a href="{{$werknemer->deletepath()}}">delete</a> <a href="{{$werknemer->editpath()}}">edit</a>
+                                <a href="{{$werknemer->path()}}"><i aria-hidden="true" class="material-icons mdc-button__icon"><!---->pageview<!----></i></a> <a href="{{$werknemer->deletepath()}}"><i aria-hidden="true" class="material-icons mdc-button__icon"><!---->delete<!----></i></a> <a href="{{$werknemer->editpath()}}"><i aria-hidden="true" class="material-icons mdc-button__icon"><!---->edit<!----></i></a>
+
                             </div>
                         </div>
                     </div>
