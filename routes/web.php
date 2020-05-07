@@ -32,7 +32,7 @@ Route::get('/werknemer/{werknemer}/delete','WerknemersController@destroy')->name
 Route::put('/werknemer/{werknemer}', 'WerknemersController@update')->name('werknemer.update');
 Route::get('/werknemer/{Werknemer}/','WerknemersController@show')->name('werknemer.show');
 
-// Artikelen routes
+// Artikelen routes - Gobi 
 Route::get('/artikelen', 'ArtikelenController@index')->name('artikelen.single');
 Route::post('/artikelen', 'ArtikelenController@store');
 Route::get('/artikelen/create', 'ArtikelenController@create')->name('artikelen.create');
