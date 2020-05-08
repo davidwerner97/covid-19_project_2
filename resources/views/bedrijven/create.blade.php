@@ -18,7 +18,7 @@
                     <label class="label" for="status_titel">Naam</label>
 
                     <div class="control">
-                        <input class="input" type="text"  name="naam" id="naam" value="{{$bedrijfs->naam}}">
+                        <input class="input" type="text"  name="naam" id="naam" value="{{$bedrijf->naam}}">
                     </div>
                 </div>
 
@@ -26,7 +26,7 @@
                     <label class="label" for="status_beschrijving">Plaats</label>
 
                     <div class="control">
-                        <textarea class="textarea" name="plaats" id="plaats">{{$bedrijfs->plaats}}</textarea>
+                        <textarea class="textarea" name="plaats" id="plaats">{{$bedrijf->plaats}}</textarea>
                     </div>
                 </div>
 
@@ -34,7 +34,7 @@
                     <label class="label" for="datum">Postcode</label>
 
                     <div class="control">
-                        <textarea class="textarea" name="postcode" id="postcode">{{$bedrijfs->postcode}}</textarea>
+                        <textarea class="textarea" name="postcode" id="postcode">{{$bedrijf->postcode}}</textarea>
                     </div>
                 </div>
 
@@ -42,7 +42,7 @@
                     <label class="label" for="datum">Huisnummer</label>
 
                     <div class="control">
-                        <textarea class="textarea" name="datum" id="datum">{{$bedrijfs->hnummer}}</textarea>
+                        <textarea class="textarea" name="datum" id="datum">{{$bedrijf->hnummer}}</textarea>
                     </div>
                 </div>
 
@@ -50,7 +50,7 @@
                     <label class="label" for="datum">Straat</label>
 
                     <div class="control">
-                        <textarea class="textarea" name="straat" id="straat">{{$bedrijfs->straat}}</textarea>
+                        <textarea class="textarea" name="straat" id="straat">{{$bedrijf->straat}}</textarea>
                     </div>
                 </div>
 
@@ -58,7 +58,7 @@
                     <label class="label" for="datum">Telefoonnummer</label>
 
                     <div class="control">
-                        <textarea class="textarea" name="telnummer" id="telnummer">{{$bedrijfs->telnummer}}</textarea>
+                        <textarea class="textarea" name="telnummer" id="telnummer">{{$bedrijf->telnummer}}</textarea>
                     </div>
                 </div>
 
