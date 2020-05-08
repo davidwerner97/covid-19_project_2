@@ -23,7 +23,7 @@
                 </div>
 
                 <div class="field">
-                    <label class="label" for="status_beschrijving">Beschrijving</label>
+                    <label class="label" for="status_beschrijving">Plaats</label>
 
                     <div class="control">
                         <textarea class="textarea" name="status_beschrijving" id="status_beschrijving">{{$bedrijf->status_beschrijving}}</textarea>
@@ -31,12 +31,37 @@
                 </div>
 
                 <div class="field">
-                    <label class="label" for="datum">Datum</label>
+                    <label class="label" for="datum">Postcode</label>
 
                     <div class="control">
                         <textarea class="textarea" name="datum" id="datum">{{$status->datum}}</textarea>
                     </div>
                 </div>
+
+                <div class="field">
+                    <label class="label" for="datum">Huisnummer</label>
+
+                    <div class="control">
+                        <textarea class="textarea" name="datum" id="datum">{{$status->datum}}</textarea>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label" for="datum">Straat</label>
+
+                    <div class="control">
+                        <textarea class="textarea" name="datum" id="datum">{{$status->datum}}</textarea>
+                    </div>
+                </div>
+
+                <div class="field">
+                    <label class="label" for="datum">Telefoonnummer</label>
+
+                    <div class="control">
+                        <textarea class="textarea" name="datum" id="datum">{{$status->datum}}</textarea>
+                    </div>
+                </div>
+
                 <div class="field is-grouped">
                     <div class="control">
                         <button class="button is-link" type="submit">Submit</button>
