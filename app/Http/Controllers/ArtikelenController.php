@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use App\Artikel;
+use App\Bedrijf;
 use Illuminate\Http\Request;
 
 class ArtikelenController extends Controller
@@ -23,16 +24,19 @@ class ArtikelenController extends Controller
 
     public function create(){
         // Aanroepen view (bijv. create.blade.php) om een nieuw object te maken
-
-        return view('artikelen.create');
+        $bedrijven = Bedrijf::pluck('naam','id');
+        return view('artikelen.create',compact('bedrijven'));
     }
 
-    public function store(){
+    public function store(Artikel $artikel){
         // Opslaan nieuw object in de database.
+        $art =Artikel::create($this->validateArtikelen());
+        var_dump($art);
+        die();
+        $artikelen = Artikel::all();
+        return view('artikelen.single', ['artikelen' => $artikelen]);
 
-        Artikel::create($this->validateArtikelen());
-
-        return redirect('/artikelen');
+//        return redirect('/artikelen');
     }
 
     public function edit(Artikel $artikel){
@@ -55,15 +59,15 @@ class ArtikelenController extends Controller
         $artikel->delete();
 
         return redirect('/artikelen');
-
     }
 
-    protected function validateArtikelen()
+    protected function validateArtikelen() : array
     {
-        return \request()->validate([
+        return request()->validate([
             'titel' => 'required',
             'inhoud' => 'required',
-            'datum' => 'required'
+            'datum' => 'required',
+            'bedrijf_id' => 'required'
         ]);
     }
 }
