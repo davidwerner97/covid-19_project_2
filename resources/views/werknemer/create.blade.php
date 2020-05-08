@@ -1,13 +1,19 @@
 @extends('layout')
 @section('head')
     <style>
+        .label{
+            color:white;
+        }
+        .mainform{
+            padding: 0 100%;
+        }
 
     </style>
 @endsection
 
 @section('inhoud')
     <div id="content">
-        <form method="post" action="{{route('werknemer.store')}}">
+        <form method="post" action="{{route('werknemer.store')}}" class="mainform">
             @csrf
 
             <div class="field">
