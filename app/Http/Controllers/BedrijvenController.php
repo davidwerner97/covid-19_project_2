@@ -17,8 +17,8 @@ class BedrijvenController extends Controller
     public function show($id)
     {
         //laat informatie van 1 bedrijf zien
-        $bedrijf = Werknemer::find($id);
-        return view('bedrijven.show', ["bedrijven" => $bedrijf]);
+        $bedrijf = Bedrijf::find($id);
+        return view('bedrijven.show', ["bedrijf" => $bedrijf]);
     }
 
     public function create()
