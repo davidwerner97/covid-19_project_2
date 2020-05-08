@@ -12,15 +12,15 @@ use Illuminate\Support\Facades\Route;
 | contains the "web" middleware group. Now create something great!
 |
 */
-Route::get('/', function () {
-    return view('welcome');
-});
+
 //status routes
-Route::get('/', 'StatusesController@index')->named('status.index');
-Route::post('/status', 'StatusesController@store')->named('status.store');
-Route::get('/status/create', 'StatusesController@create')->named('status.create');
-Route::get('/status/{status}/edit', 'StatusesController@edit')->named('status.edit');
-Route::put('/status/{status}', 'StatusesController@update')->named('status.update');
+Route::get('/status/', 'StatusesController@index')->name('status.index');
+Route::get('/status/{status}','StatusesController@show')->name('status.show');
+Route::post('/status/', 'StatusesController@store')->name('status.store');
+Route::get('/status/create', 'StatusesController@create')->name('status.create');
+Route::get('/status/{status}/edit', 'StatusesController@edit')->name('status.edit');
+Route::get('/status/{status}/delete','StatusesController@destroy')->name('status.delete');
+Route::put('/status/{status}', 'StatusesController@update')->name('status.update');
 
 //werknemer routes
 Route::get('/werknemer/','WerknemersController@index')->name('werknemer.index');

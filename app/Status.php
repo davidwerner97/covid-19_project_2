@@ -7,8 +7,14 @@ use Illuminate\Database\Eloquent\Model;
 class Status extends Model
 {
     public $timestamps = false;
-    protected $fillable = ['status_titel','status_beschrijving','datum'];
+    protected $fillable = ['titel','beschrijving','datum'];
     public function path(){
-        return route('status.index');
+        return route('status.show', $this);
+    }
+    public function deletepath(){
+        return route('status.delete', $this);
+    }
+    public function editpath(){
+        return route('status.edit', $this);
     }
 }
