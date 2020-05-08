@@ -36,7 +36,8 @@ class WerknemersController extends Controller
     }
     public function edit(Werknemer $werknemer){
         //laat view zien om werknemer te bewerken
-        return view('werknemer.edit', ['werknemer' =>$werknemer]);
+        $bedrijven= Bedrijf::pluck('naam', 'id');
+        return view('werknemer.edit', ['werknemer' =>$werknemer],compact('bedrijven'));
     }
     public function update(Werknemer $werknemer){
         //update de werknemer

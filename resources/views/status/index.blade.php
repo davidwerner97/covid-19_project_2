@@ -20,6 +20,7 @@
         .mdc-card__media{
             text-align: left;
             margin: 10px;
+            font-size: x-large;
 
         }
         .mdc-card__media-content{
@@ -30,17 +31,19 @@
 
 @section('inhoud')
     <div id="content">
+        <ul>
+        @foreach ($status as $status)
             <div class="mdc-card element-card earth">
                 <div class="mdc-card__media">
                     <div class="mdc-card__media-content">
-                        <div class="mdc-typography--headline4">{{ $werknemer->vnaam .' ' . $werknemer->anaam }}</div>
-                        <div class="mdc-typography--headline9">{{ $werknemer->functie}}</div>
-                        <div class="mdc-typography--headline9">{{$werknemer->plaats. ' ' . $werknemer->postcode}}</div>
-                        <div class="mdc-typography--headline9">{{$werknemer->straat. ' ' . $werknemer->hnummer}}</div>
-                        <div class="mdc-typography--headline9">{{$werknemer->telnummer}}</div>
-                        <a href="{{$werknemer->deletepath()}}"><i aria-hidden="true" class="material-icons mdc-button__icon"><!---->delete<!----></i></a> <a href="{{$werknemer->editpath()}}"><i aria-hidden="true" class="material-icons mdc-button__icon"><!---->edit<!----></i></a>
+                        <div class="mdc-typography--headline4">{{ $status->titel}}</div>
+                        <div class="mdc-typography--headline9">{{ $status->beschrijving}}</div>
+                        <div class="mdc-typography--headline9">{{$status->datum}}</div>
+                        <a href="{{$status->path()}}">view</a> <a href="{{$status->deletepath()}}">delete</a> <a href="{{$status->editpath()}}">edit</a>
                     </div>
                 </div>
             </div>
+        </ul>
+        @endforeach
     </div>
 @endsection

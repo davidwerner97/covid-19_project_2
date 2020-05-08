@@ -1,36 +1,36 @@
 @extends('layout')
 
 @section('head')
-    <link href="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.css" rel="stylesheet">
+
 @endsection
 
 @section('inhoud')
 
     <div id="wrapper">
         <div id="page" class="container">
-            <h1 class="heading has-text-weight-bold is-size-4"> status toevoegen</h1>
+            <h1 class="heading " style="color: white;">Status toevoegen</h1>
 
-            <form method="post" action="/status">
+            <form method="post" action="{{route('status.store')}}">
                 @csrf
 
                 <div class="field">
-                    <label class="label" for="status_titel">Titel</label>
+                    <label class="label" for="titel">Titel</label>
 
                     <div class="control">
-                        <input class="input @error('status_titel') is-danger @enderror" type="text"  name="titel" id="titel" value="{{old('status_titel')}}">
-                        @error('status_titel')
-                        <p class="alert is-danger">{{ $errors->first('status_titel') }}</p>
+                        <input class="input @error('titel') is-danger @enderror" type="text"  name="titel" id="titel" value="{{old('titel')}}">
+                        @error('titel')
+                        <p class="alert is-danger">{{ $errors->first('titel') }}</p>
                         @enderror
                     </div>
                 </div>
 
                 <div class="field">
-                    <label class="label" for="status_beschrijving">Beschrijving</label>
+                    <label class="label" for="beschrijving">Beschrijving</label>
 
                     <div class="control">
-                        <input class="input @error('status_beschrijving') is-danger @enderror" name="status_beschrijving" id="status_beschrijving" value="{{old('status_beschrijving')}}"></textarea>
-                        @error('status_beschrijving')
-                        <p class="alert is-danger">{{ $errors->first('status_beschrijving') }}</p>
+                        <input class="input @error('beschrijving') is-danger @enderror" name="beschrijving" id="beschrijving" value="{{old('beschrijving')}}"></textarea>
+                        @error('beschrijving')
+                        <p class="alert is-danger">{{ $errors->first('beschrijving') }}</p>
                         @enderror
                     </div>
                 </div>
