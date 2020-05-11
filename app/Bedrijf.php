@@ -12,4 +12,14 @@ class Bedrijf extends Model
     {
         return route('bedrijven.single', $this);
     }
+
+    public function deletepath()
+    {
+        return route('bedrijven.delete', $this);
+    }
+
+    public function editpath()
+    {
+        return route('bedrijven.edit', $this);
+    }
 }
