@@ -36,6 +36,7 @@ Route::get('/artikelen', 'ArtikelenController@index')->name('artikelen.single');
 Route::post('/artikelen', 'ArtikelenController@store');
 Route::get('/artikelen/create', 'ArtikelenController@create')->name('artikelen.create');
 Route::get('/artikelen/{artikel}', 'ArtikelenController@show')->name('artikelen.single');
+
 //bedrijf routes
 Route::get('/bedrijf', 'BedrijvenController@index')->name('bedrijven.index');
 Route::post('/bedrijf', 'BedrijvenController@store')->name('bedrijven.store');
