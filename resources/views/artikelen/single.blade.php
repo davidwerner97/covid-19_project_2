@@ -1,6 +1,6 @@
 <div>
     <div>
-        <h6>{{ $artikel->titel }}</h6>
+        <h1>{{ $artikel->titel }}</h1>
     </div>
     <div class="card-body">
         <p>Datum:: {{ $artikel->datum }}</p>
@@ -8,7 +8,7 @@
     </div>
 
     <div>
-        {{--<a href="/artikelen/{{ $artikel->id }}/edit"> Update Animal</a>--}}
+        <a href="/artikelen/{{ $artikel->id }}/edit"> Update Animal</a>
         <form method="POST" action="{{route('artikelen.delete', [$artikel->id])}}" >
             @csrf
             @method('DELETE')

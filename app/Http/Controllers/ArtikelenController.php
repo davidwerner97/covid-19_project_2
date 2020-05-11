@@ -30,10 +30,16 @@ class ArtikelenController extends Controller
 
     public function store(Artikel $artikel){
         // Opslaan nieuw object in de database.
-        $art =Artikel::create($this->validateArtikelen());
+        /*$art = Artikel::create($this->validateArtikelen());
         var_dump($art);
         die();
-        $artikelen = Artikel::all();
+        $artikelen = Artikel::all();*/
+
+        Artikel::create($this->validateArtikelen());
+        $artikelen = Artikel::latest()->get();
+
+
+//        return redirect();
         return view('artikelen.single', ['artikelen' => $artikelen]);
 
 //        return redirect('/artikelen');
@@ -43,6 +49,7 @@ class ArtikelenController extends Controller
         // Aanroepen view (bijv. edit.blade.php) om object te wijzigen
 
         return view('artikelen.edit', ['artikel' => $artikel]);
+
     }
 
     public function update(Artikel $artikel){

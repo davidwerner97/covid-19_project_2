@@ -25,16 +25,15 @@
                         @enderror
 
                     </div>
-{{--                    <div class="form-group">--}}
-{{--                        Datum:--}}
-{{--                        <input type="date" class="form-control form-control-user @error('datum') border-danger @enderror" name="datum" value="{{ old('datum') }}">--}}
+                    <div class="form-group">
+                       Datum:
+                        <input type="date" class="form-control form-control-user @error('datum') border-danger @enderror" name="datum" value="{{ old('datum') }}">
 
-{{--                        @error('datum')--}}
-{{--                        <p class="fieldError">{{ $errors->first('datum') }}</p>--}}
-{{--                        @enderror--}}
+                        @error('datum')
+                        <p class="fieldError">{{ $errors->first('datum') }}</p>
+                        @enderror
 
-{{--                    </div>--}}
-{{--             /--}}
+                    </div>
                     <div class="form-group">
                         <label class="label" for="bedrijf_id">bedrijf_id:</label>
                         <div class="control">
