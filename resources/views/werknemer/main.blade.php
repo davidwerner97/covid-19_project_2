@@ -1,6 +1,10 @@
 @extends('layout')
 @section('head')
+    <link href="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.css" rel="stylesheet">
+    <script src="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.js"></script>
+    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <style>
+
         .mdc-card {
             float: left;
             background: #2b2b2b;
@@ -37,15 +41,26 @@
         #content {
             width: 100%;
         }
+        .grid-container {
+            display: grid;
+            grid-template-columns: 1.5fr 1fr 1.5fr;
+            grid-template-rows: 1.5fr;
+            gap: 1px 1px;
+            grid-template-areas: "statuses statuses artiekelen";
+        }
+
+        .statuses { grid-area: statuses; }
+
+        .artiekelen { grid-area: artiekelen; }
     </style>
 @endsection
 
 @section('inhoud')
 
-    <div id="content">
-        <div id="status">
+    <div class="grid-container">
+        <div class="statuses">
             @if (!empty($status))
-                <div class="mdc-card element-card earth">
+                <div class="mdc-card element-card">
                     <div class="mdc-card__media">
                         <div class="mdc-card__media-content">
                             <div class="mdc-typography--headline4">{{ $status->titel}}</div>
@@ -55,27 +70,23 @@
                         </div>
                     </div>
                 </div>
-                @else
-                    er zijn geen statusen
-                @endif
-
+            @else
+                er zijn geen statusen
+            @endif
         </div>
-
-        <div id="artiekelen">
+        <div class="artiekelen">
             @if (!empty($artikelen))
-                    @foreach($artikelen as $artikel)
-                        <div  class="card border-left-primary shadow h-100 py-2" style="cursor: pointer;" onclick="window.location='/artikelen/{{ $artikel->id }}';">
-                            <div>
-                                <a>{{ $artikel->titel }}</a>
-                            </div>
-                            <div>
-                                <a>{{ $artikel->datum }}</a>
-                            </div>
-                            <div>
-                                <a>{{ $artikel->inhoud }}</a>
+                @foreach($artikelen as $artikel)
+                    <div class="mdc-card element-card">
+                        <div class="mdc-card__media">
+                            <div class="mdc-card__media-content">
+                                <div class="mdc-typography--headline4">{{ $artikel->titel}}</div>
+                                <div class="mdc-typography--headline9">{{ $artikel->datum}}</div>
+                                <div class="mdc-typography--headline9">{{$artikel->datum}}</div>
+{{--                                <a href="{{$artikel->deletepath()}}">delete</a> <a href="{{$artikel->editpath()}}">edit</a>--}}
                             </div>
                         </div>
-                        <br>
+                    </div>
                 @endforeach
             @else
                 er zijn geen artiekelen
