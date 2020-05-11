@@ -31,6 +31,9 @@
         .mdc-card__media-content{
             display: inline-block;
         }
+        #content{
+            width: 100%;
+        }
     </style>
 @endsection
 

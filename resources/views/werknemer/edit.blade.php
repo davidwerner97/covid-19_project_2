@@ -115,7 +115,7 @@
                     @enderror
                 </div>
             </div>
-            <input type="submit">
+            <input type="submit" value="bewerk">
 
         </form>
     </div>

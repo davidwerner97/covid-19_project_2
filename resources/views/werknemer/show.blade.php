@@ -38,7 +38,7 @@
 
 @section('inhoud')
     <div id="content">
-            <div class="mdc-card element-card earth">
+            <div class="mdc-card element-card">
                 <div class="mdc-card__media">
                     <div class="mdc-card__media-content">
                         <div class="mdc-typography--headline4 card-text">{{ $werknemer->vnaam .' ' . $werknemer->anaam }}</div>
