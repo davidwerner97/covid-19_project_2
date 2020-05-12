@@ -10,7 +10,7 @@ class Bedrijf extends Model
 
     public function path()
     {
-        return route('bedrijven.single', $this);
+        return route('bedrijven.show', $this);
     }
 
     public function deletepath()

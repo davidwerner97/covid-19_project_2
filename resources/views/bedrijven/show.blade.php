@@ -33,12 +33,12 @@
         <div class="mdc-card element-card earth">
             <div class="mdc-card__media">
                 <div class="mdc-card__media-content">
-                    <div class="mdc-typography--headline4">{{ $bedrijfs->naam }}</div>
-                    <div class="mdc-typography--headline9">{{ $bedrijfs->plaats}}</div>
-                    <div class="mdc-typography--headline9">{{$bedrijfs->postcode}}</div>
-                    <div class="mdc-typography--headline9">{{$bedrijfs->straat. ' ' . $bedrijfs->hnummer}}</div>
-                    <div class="mdc-typography--headline9">{{$bedrijfs->telnummer}}</div>
-                    <a href="{{$werknemer->deletepath()}}"><i aria-hidden="true" class="material-icons mdc-button__icon"><!---->delete<!----></i></a> <a href="{{$werknemer->editpath()}}"><i aria-hidden="true" class="material-icons mdc-button__icon"><!---->edit<!----></i></a>
+                    <div class="mdc-typography--headline4">{{ $bedrijf->naam }}</div>
+                    <div class="mdc-typography--headline9">{{ $bedrijf->plaats}}</div>
+                    <div class="mdc-typography--headline9">{{$bedrijf->postcode}}</div>
+                    <div class="mdc-typography--headline9">{{$bedrijf->straat. ' ' . $bedrijf->hnummer}}</div>
+                    <div class="mdc-typography--headline9">{{$bedrijf->telnummer}}</div>
+                    <a href="{{$bedrijf->deletepath()}}"><i aria-hidden="true" class="material-icons mdc-button__icon"><!---->delete<!----></i></a> <a href="{{$bedrijf->editpath()}}"><i aria-hidden="true" class="material-icons mdc-button__icon"><!---->edit<!----></i></a>
                 </div>
             </div>
         </div>

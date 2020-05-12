@@ -49,9 +49,12 @@ class BedrijvenController extends Controller
         return redirect(route('bedrijven.show', $bedrijf));
     }
 
-    public function destroy()
+    public function destroy(Bedrijf $bedrijf)
     {
-        //verwijder  en werknemer
+        //bedrijf verwijderen
+        $bedrijf->delete();
+        $bedrijf = Bedrijf::latest()->get();
+        return view('bedrijven.index', ['bedrijf' => $bedrijf]);
     }
 
     public function validateBedrijf(): array

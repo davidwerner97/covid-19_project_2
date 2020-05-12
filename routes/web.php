@@ -39,7 +39,7 @@ Route::get('/artikelen/{artikel}', 'ArtikelenController@show')->name('artikelen.
 
 //bedrijf routes
 Route::get('/bedrijf/', 'BedrijvenController@index')->name('bedrijven.index');
-Route::post('/bedrijf', 'BedrijvenController@store')->name('bedrijven.store');
+Route::post('/bedrijf/', 'BedrijvenController@store')->name('bedrijven.store');
 Route::get('/bedrijf/create', 'BedrijvenController@create')->name('bedrijven.create');
 Route::get('/bedrijf/{bedrijf}', 'BedrijvenController@show')->name('bedrijven.show');
 Route::get('/bedrijf/{bedrijf}/edit', 'BedrijvenController@edit')->name('bedrijven.edit');
