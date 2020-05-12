@@ -34,7 +34,7 @@
 
 @section('inhoud')
     <div id="content">
-        @foreach($bedrijf as $bedrijf)
+        @foreach($bedrijven as $bedrijf)
             <div class="mdc-card element-card earth">
                 <div class="mdc-card__media">
                     <div class="mdc-card__media-content">
@@ -43,10 +43,12 @@
                         <div class="mdc-typography--headline9">{{$bedrijf->postcode}}</div>
                         <div class="mdc-typography--headline9">{{$bedrijf->straat. ' ' . $bedrijf->hnummer}}</div>
                         <div class="mdc-typography--headline9">{{$bedrijf->telnummer}}</div>
-                        <a href="{{$bedrijf->path()}}}"><i aria-hidden="true" class="material-icons mdc-button__icon"><!---->delete
-                                <!----></i></a> <a href=""><i aria-hidden="true"
-                                                              class="material-icons mdc-button__icon">
-                                <!---->edit<!----></i></a>
+                        <a href="{{$bedrijf->path()}}"><i aria-hidden="true" class="material-icons mdc-button__icon">
+                                <!---->pageview<!----></i></a> <a href="{{$bedrijf->deletepath()}}"><i
+                                    aria-hidden="true" class="material-icons mdc-button__icon"><!---->delete<!----></i></a>
+                        <a href="{{$bedrijf->editpath()}}"><i aria-hidden="true"
+                                                                class="material-icons mdc-button__icon"><!---->edit
+                                <!----></i></a>
                     </div>
                 </div>
             </div>

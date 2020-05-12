@@ -10,8 +10,8 @@ class BedrijvenController extends Controller
     public function index()
     {
         //geef een lijst van bedrijven
-        $bedrijf = Bedrijf::latest()->get();
-        return view('bedrijven.index', ["bedrijven" => $bedrijf]);
+        $bedrijven = Bedrijf::latest()->get();
+        return view('bedrijven.index', ["bedrijven" => $bedrijven]);
     }
 
     public function show($id)
