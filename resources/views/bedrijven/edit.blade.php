@@ -1,7 +1,9 @@
 @extends('layout')
 
 @section('head')
-    <link href="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.css" rel="stylesheet">
+    <style>
+
+    </style>
 @endsection
 
 @section('inhoud')
@@ -10,12 +12,12 @@
         <div id="page" class="container">
             <h1 class="heading has-text-weight-bold is-size-4">Bedrijf aanpassen</h1>
 
-            <form method="POST" action="/bedrijfs">
+            <form method="POST" action="{{route('bedrijven.update', $bedrijf)}}">
                 @csrf
                 @method('PUT')
 
                 <div class="field">
-                    <label class="label" for="status_titel">Naam</label>
+                    <label class="label" for="naam">Naam</label>
 
                     <div class="control">
                         <input class="input" type="text"  name="naam" id="naam" value="">
@@ -23,7 +25,7 @@
                 </div>
 
                 <div class="field">
-                    <label class="label" for="status_beschrijving">Plaats</label>
+                    <label class="label" for="plaats">Plaats</label>
 
                     <div class="control">
                         <textarea class="textarea" name="plaats" id="plaats"></textarea>
@@ -31,7 +33,7 @@
                 </div>
 
                 <div class="field">
-                    <label class="label" for="datum">Postcode</label>
+                    <label class="label" for="postcode">Postcode</label>
 
                     <div class="control">
                         <textarea class="textarea" name="postcode" id="postcode"></textarea>
@@ -39,15 +41,15 @@
                 </div>
 
                 <div class="field">
-                    <label class="label" for="datum">Huisnummer</label>
+                    <label class="label" for="hnummer">Huisnummer</label>
 
                     <div class="control">
-                        <textarea class="textarea" name="datum" id="datum"></textarea>
+                        <textarea class="textarea" name="hnummer" id="hnummer"></textarea>
                     </div>
                 </div>
 
                 <div class="field">
-                    <label class="label" for="datum">Straat</label>
+                    <label class="label" for="straat">Straat</label>
 
                     <div class="control">
                         <textarea class="textarea" name="straat" id="straat"></textarea>

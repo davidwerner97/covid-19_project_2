@@ -1,76 +1,84 @@
 @extends('layout')
-
 @section('head')
-    <link href="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.css" rel="stylesheet">
+    <style>
+
+    </style>
 @endsection
 
 @section('inhoud')
+    <div id="content">
+        <form method="post" action="{{route('bedrijven.store')}}">
+            @csrf
 
-    <div id="wrapper">
-        <div id="page" class="container">
-            <h1 class="heading has-text-weight-bold is-size-4">Bedrijf maken</h1>
+            <div class="field">
+                <label class="label" for="naam">naam bedrijf</label>
 
-            <form method="POST" action="/bedrijfs">
-                @csrf
-                @method('PUT')
-
-                <div class="field">
-                    <label class="label" for="status_titel">Naam</label>
-
-                    <div class="control">
-                        <input class="input" type="text"  name="naam" id="naam" value="">
-                    </div>
+                <div class="control">
+                    <input class="input @error('naam') is-danger @enderror" type="text" name="naam" id="naam"
+                           value="{{old('naam')}}">
+                    @error('naam')
+                    <p class="alert is-danger">{{ $errors->first('naam') }}</p>
+                    @enderror
                 </div>
-
-                <div class="field">
-                    <label class="label" for="status_beschrijving">Plaats</label>
-
-                    <div class="control">
-                        <textarea class="textarea" name="plaats" id="plaats"></textarea>
-                    </div>
+            </div>
+            <div class="field">
+                <label class="label" for="plaats">plaats</label>
+                <div class="control">
+                    <input class="input @error('plaats') is-danger @enderror" type="text" name="plaats" id="plaats"
+                           value="{{old('plaats')}}">
+                    @error('plaats')
+                    <p class="alert is-danger">{{ $errors->first('plaats') }}</p>
+                    @enderror
                 </div>
-
-                <div class="field">
-                    <label class="label" for="datum">Postcode</label>
-
-                    <div class="control">
-                        <textarea class="textarea" name="postcode" id="postcode"></textarea>
-                    </div>
+            </div>
+            <div class="field">
+                <label class="label" for="postcode">postcode</label>
+                <div class="control">
+                    <input class="input @error('postcode') is-danger @enderror" type="text" name="postcode" id="postcode"
+                           value="{{old('postcode')}}">
+                    @error('postcode')
+                    <p class="alert is-danger">{{ $errors->first('postcode') }}</p>
+                    @enderror
                 </div>
+            </div>
 
-                <div class="field">
-                    <label class="label" for="datum">Huisnummer</label>
-
-                    <div class="control">
-                        <textarea class="textarea" name="datum" id="datum"></textarea>
-                    </div>
+            <div class="field">
+                <label class="label" for="hnummer">huisnummer</label>
+                <div class="control">
+                    <input class="input @error('hnummer') is-danger @enderror" type="text" name="hnummer"
+                           id="hnummer" value="{{old('hnummer')}}">
+                    @error('hnummer')
+                    <p class="alert is-danger">{{ $errors->first('hnummer') }}</p>
+                    @enderror
                 </div>
+            </div>
 
-                <div class="field">
-                    <label class="label" for="datum">Straat</label>
-
-                    <div class="control">
-                        <textarea class="textarea" name="straat" id="straat"></textarea>
-                    </div>
+            <div class="field">
+                <label class="label" for="straat">straat</label>
+                <div class="control">
+                    <input class="input @error('straat') is-danger @enderror" type="text" name="straat" id="straat"
+                           value="{{old('straat')}}">
+                    @error('straat')
+                    <p class="alert is-danger">{{ $errors->first('hnummer') }}</p>
+                    @enderror
                 </div>
+            </div>
 
-                <div class="field">
-                    <label class="label" for="datum">Telefoonnummer</label>
-
-                    <div class="control">
-                        <textarea class="textarea" name="telnummer" id="telnummer"></textarea>
-                    </div>
+            <div class="field">
+                <label class="label" for="telnummer">telnummer</label>
+                <div class="control">
+                    <input class="input @error('telnummer') is-danger @enderror" type="text" name="telnummer"
+                           id="telnummer" value="{{old('telnummer')}}">
+                    @error('telnummer')
+                    <p class="alert is-danger">{{ $errors->first('telnummer') }}</p>
+                    @enderror
                 </div>
+            </div>
 
-                <div class="field is-grouped">
-                    <div class="control">
-                        <button class="button is-link" type="submit">Submit</button>
-                    </div>
-                </div>
-            </form>
+            <br>
+            <input type="submit">
 
-        </div>
+        </form>
     </div>
-
 
 @endsection
