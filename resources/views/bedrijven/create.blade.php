@@ -65,7 +65,7 @@
             </div>
 
             <div class="field">
-                <label class="label" for="telnummer">telnummer</label>
+                <label class="label" for="telnummer">telefoonnummer</label>
                 <div class="control">
                     <input class="input @error('telnummer') is-danger @enderror" type="text" name="telnummer"
                            id="telnummer" value="{{old('telnummer')}}">

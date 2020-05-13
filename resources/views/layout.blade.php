@@ -19,7 +19,7 @@
         <div id="menu">
             <ul>
                 <li class="{{Request::path() === 'werknemer.index' ?'current_page_item' : ''}}"><a href="/werknemer/" accesskey="1" title="">Werknemers</a></li>
-                <li class="{{Request::path() === 'artikelen.index' ?'current_page_item' : ''}}"><a href="/artikelen/" accesskey="2" title="">Bedrijven</a></li>
+                <li class="{{Request::path() === 'bedrijven.index' ?'current_page_item' : ''}}"><a href="/bedrijf/" accesskey="2" title="">Bedrijven</a></li>
                 <li class="{{Request::path() === 'status.index' ?'current_page_item' : ''}}"><a href="/status/" accesskey="3" title="">Statuses</a></li>
             </ul>
         </div>
