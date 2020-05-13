@@ -13,6 +13,9 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
+//main page routes
+Route::get('/main/werknemer/{werknemer}','WerknemersController@main')->name('werknemer.main');
+
 //status routes
 Route::get('/status/', 'StatusesController@index')->name('status.index');
 Route::get('/status/{status}','StatusesController@show')->name('status.show');
@@ -23,6 +26,7 @@ Route::get('/status/{status}/delete','StatusesController@destroy')->name('status
 Route::put('/status/{status}', 'StatusesController@update')->name('status.update');
 
 //werknemer routes
+
 Route::get('/werknemer/','WerknemersController@index')->name('werknemer.index');
 Route::post('/werknemer/', 'WerknemersController@store')->name('werknemer.store');
 Route::get('/werknemer/create','WerknemersController@create')->name('werknemer.create');
