@@ -25,7 +25,7 @@
         }
 
         .element-card > .mdc-card__media {
-            height: 9em;
+            height: 30em;
         }
 
         .mdc-card__media {
@@ -81,7 +81,7 @@
                         <div class="mdc-card__media">
                             <div class="mdc-card__media-content">
                                 <div class="mdc-typography--headline4">{{ $artikel->titel}}</div>
-                                <div class="mdc-typography--headline9">{{ $artikel->datum}}</div>
+                                <div class="mdc-typography--headline9">{{ $artikel->inhoud}}</div>
                                 <div class="mdc-typography--headline9">{{$artikel->datum}}</div>
 {{--                                <a href="{{$artikel->deletepath()}}">delete</a> <a href="{{$artikel->editpath()}}">edit</a>--}}
                             </div>

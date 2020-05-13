@@ -14,7 +14,7 @@ class WerknemersController extends Controller
     public function main($id){
         $werknemer = Werknemer::find($id);
         $status = Status::where('werknemers_id', $werknemer->id)->latest('datum')->first();
-        $artikelen = Artikel::where('bedrijf_id', $werknemer->bedrijf_id)->latest('datum')->get();
+        $artikelen = Artikel::where('bedrijf_id', $werknemer->bedrijf_id)->latest('datum')->limit(2)->get();
         return view('werknemer.main', ["status" => $status, "artikelen" => $artikelen]);
     }
     public function index(){
