@@ -15,9 +15,9 @@ use Illuminate\Support\Facades\Route;
 
 //status routes
 Route::get('/status/', 'StatusesController@index')->name('status.index');
-Route::get('/status/{status}','StatusesController@show')->name('status.show');
 Route::post('/status/', 'StatusesController@store')->name('status.store');
 Route::get('/status/create', 'StatusesController@create')->name('status.create');
+Route::get('/status/{status}','StatusesController@show')->name('status.show');
 Route::get('/status/{status}/edit', 'StatusesController@edit')->name('status.edit');
 Route::get('/status/{status}/delete','StatusesController@destroy')->name('status.delete');
 Route::put('/status/{status}', 'StatusesController@update')->name('status.update');
