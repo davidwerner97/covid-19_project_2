@@ -18,9 +18,9 @@ Route::get('/main/werknemer/{werknemer}','WerknemersController@main')->name('wer
 
 //status routes
 Route::get('/status/', 'StatusesController@index')->name('status.index');
-Route::get('/status/{status}','StatusesController@show')->name('status.show');
 Route::post('/status/', 'StatusesController@store')->name('status.store');
 Route::get('/status/create', 'StatusesController@create')->name('status.create');
+Route::get('/status/{status}','StatusesController@show')->name('status.show');
 Route::get('/status/{status}/edit', 'StatusesController@edit')->name('status.edit');
 Route::get('/status/{status}/delete','StatusesController@destroy')->name('status.delete');
 Route::put('/status/{status}', 'StatusesController@update')->name('status.update');
@@ -40,10 +40,15 @@ Route::get('/artikelen', 'ArtikelenController@index')->name('artikelen.single');
 Route::post('/artikelen', 'ArtikelenController@store');
 Route::get('/artikelen/create', 'ArtikelenController@create')->name('artikelen.create');
 Route::get('/artikelen/{artikel}', 'ArtikelenController@show')->name('artikelen.single');
+
 //bedrijf routes
-Route::get('/bedrijf/{bedrijf}/edit','WerknemersController@edit')->name('bedrijven.edit');
-Route::get('/bedrijf/{bedrijf}/delete','WerknemersController@destroy')->name('bedrijven.delete');
-Route::put('/bedrijf/{bedrijf}', 'WerknemersController@update')->name('bedrijven.update');
-Route::get('/bedrijf/{bedrijf}','WerknemersController@show')->name('bedrijven.show');
+Route::get('/bedrijf/', 'BedrijvenController@index')->name('bedrijven.index');
+Route::post('/bedrijf/', 'BedrijvenController@store')->name('bedrijven.store');
+Route::get('/bedrijf/create', 'BedrijvenController@create')->name('bedrijven.create');
+Route::get('/bedrijf/{bedrijf}', 'BedrijvenController@show')->name('bedrijven.show');
+Route::get('/bedrijf/{bedrijf}/delete', 'BedrijvenController@destroy')->name('bedrijven.delete');
+Route::get('/bedrijf/{bedrijf}/edit', 'BedrijvenController@edit')->name('bedrijven.edit');
+Route::put('/bedrijf/{bedrijf}', 'BedrijvenController@update')->name('bedrijven.update');
+
 
 

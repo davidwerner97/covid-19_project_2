@@ -17,8 +17,8 @@ class BedrijvenController extends Controller
     public function show($id)
     {
         //laat informatie van 1 bedrijf zien
-        $bedrijf = Werknemer::find($id);
-        return view('bedrijven.show', ["bedrijven" => $bedrijf]);
+        $bedrijf = Bedrijf::find($id);
+        return view('bedrijven.show', ["bedrijf" => $bedrijf]);
     }
 
     public function create()
@@ -49,9 +49,12 @@ class BedrijvenController extends Controller
         return redirect(route('bedrijven.show', $bedrijf));
     }
 
-    public function destroy()
+    public function destroy(Bedrijf $bedrijf)
     {
-        //verwijder  en werknemer
+        //bedrijf verwijderen
+        $bedrijf->delete();
+        $bedrijf = Bedrijf::latest()->get();
+        return view('bedrijven.index', ['bedrijven' => $bedrijf]);
     }
 
     public function validateBedrijf(): array
