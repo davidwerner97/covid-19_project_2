@@ -6,7 +6,8 @@
             flex-wrap: wrap;
         }
         .mdc-card{
-            float:none;
+            float:right;
+            background-color: black;
         }
 
         .element-card {
@@ -43,8 +44,10 @@
                         <div class="mdc-typography--headline4">Title: {{ $status->titel}}</div>
                         <div class="mdc-typography--headline9">Beschrijving: {{ $status->beschrijving}}</div>
                         <div class="mdc-typography--headline9">Datum: {{$status->datum}}</div>
-                        <a class="btn btn-light" href="{{$status->path()}}">View</a> <a class="btn btn-danger" href="{{$status->deletepath()}}">Verwijderen</a> <a class="btn btn-info" href="{{$status->editpath()}}">Wijzigen</a>
                     </div>
+                </div>
+                <div style="margin-left: 20px; margin-bottom: 25px;">
+                    <a class="btn btn-light" href="{{$status->path()}}">View</a> <a class="btn btn-danger" href="{{$status->deletepath()}}">Verwijderen</a> <a class="btn btn-info" href="{{$status->editpath()}}">Wijzigen</a>
                 </div>
             </div>
         </ul>
