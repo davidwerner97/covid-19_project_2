@@ -6,7 +6,7 @@
             flex-wrap: wrap;
         }
         .mdc-card{
-            float:left;
+            float:none;
         }
 
         .element-card {
@@ -30,16 +30,20 @@
 @endsection
 
 @section('inhoud')
+    <div id="header" style="margin-left: 20px; margin-top: 30px;">
+        <h1>Statuses</h1>
+    </div>
     <div id="content">
         <ul>
         @foreach ($status as $status)
             <div class="mdc-card element-card earth">
                 <div class="mdc-card__media">
                     <div class="mdc-card__media-content">
-                        <div class="mdc-typography--headline4">{{ $status->titel}}</div>
-                        <div class="mdc-typography--headline9">{{ $status->beschrijving}}</div>
-                        <div class="mdc-typography--headline9">{{$status->datum}}</div>
-                        <a href="{{$status->path()}}">view</a> <a href="{{$status->deletepath()}}">delete</a> <a href="{{$status->editpath()}}">edit</a>
+                        <div class="mdc-typography--headline4">Status-Id: {{ $status->id}}</div>
+                        <div class="mdc-typography--headline4">Title: {{ $status->titel}}</div>
+                        <div class="mdc-typography--headline9">Beschrijving: {{ $status->beschrijving}}</div>
+                        <div class="mdc-typography--headline9">Datum: {{$status->datum}}</div>
+                        <a class="btn btn-light" href="{{$status->path()}}">View</a> <a class="btn btn-danger" href="{{$status->deletepath()}}">Verwijderen</a> <a class="btn btn-info" href="{{$status->editpath()}}">Wijzigen</a>
                     </div>
                 </div>
             </div>
