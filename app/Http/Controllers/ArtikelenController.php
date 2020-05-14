@@ -17,7 +17,7 @@ class ArtikelenController extends Controller
     }
 
     public function show(Artikel $artikel){
-        // Aanroepen view (bijv. single.blade.php) om object te tonen
+        // Aanroepen view (bijv. show.blade.php) om object te tonen
 
         return view('artikelen.single', ['artikel' => $artikel]);
     }
