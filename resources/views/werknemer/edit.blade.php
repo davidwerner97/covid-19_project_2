@@ -1,13 +1,18 @@
 @extends('layout')
 @section('head')
     <style>
-
+    .label{
+        color:white;
+    }
+    .mainform{
+        padding: 0 100%;
+    }
     </style>
 @endsection
 
 @section('inhoud')
     <div id="content">
-        <form method="post" action="{{route('werknemer.update', $werknemer)}}">
+        <form method="post" action="{{route('werknemer.update', $werknemer)}}" class="mainform">
             @csrf
             @method('PUT')
 
@@ -110,7 +115,7 @@
                     @enderror
                 </div>
             </div>
-            <input type="submit">
+            <input type="submit" value="bewerk">
 
         </form>
     </div>

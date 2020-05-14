@@ -8,38 +8,38 @@
 
     <div id="wrapper">
         <div id="page" class="container">
-            <h1 class="heading has-text-weight-bold is-size-4"> Status wijzigen</h1>
+            <h1 class="heading " style="color: white; margin-bottom: 20px;">Status wijzigen</h1>
 
             <form method="POST" action="/status/{{$status->id}}">
                 @csrf
                 @method('PUT')
 
-                <div class="field">
+                <div class="field" style="margin-bottom: 20px;">
                     <label class="label" for="titel">Titel</label>
 
                     <div class="control">
-                        <input class="input" type="text"  name="titel" id="titel" value="{{$status->titel}}">
+                        <input class="form-control" type="text"  name="titel" id="titel" value="{{$status->titel}}">
                     </div>
                 </div>
 
-                <div class="field">
+                <div class="field" style="margin-bottom: 20px;">
                     <label class="label" for="beschrijving">Beschrijving</label>
 
                     <div class="control">
-                        <textarea class="textarea" name="beschrijving" id="beschrijving">{{$status->beschrijving}}</textarea>
+                        <textarea class="form-control" name="beschrijving" id="beschrijving">{{$status->beschrijving}}</textarea>
                     </div>
                 </div>
 
-                <div class="field">
+                <div class="field" style="margin-bottom: 20px;">
                     <label class="label" for="datum">Datum</label>
 
                     <div class="control">
-                        <textarea class="textarea" name="datum" id="datum">{{$status->datum}}</textarea>
+                        <textarea class="form-control" name="datum" id="datum">{{$status->datum}}</textarea>
                     </div>
                 </div>
                 <div class="field is-grouped">
                     <div class="control">
-                        <button class="button is-link" type="submit">Submit</button>
+                        <button class="btn btn-info" type="submit">wijzigen</button>
                     </div>
                 </div>
             </form>

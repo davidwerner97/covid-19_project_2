@@ -54,7 +54,7 @@ class BedrijvenController extends Controller
         //bedrijf verwijderen
         $bedrijf->delete();
         $bedrijf = Bedrijf::latest()->get();
-        return view('bedrijven.index', ['bedrijf' => $bedrijf]);
+        return view('bedrijven.index', ['bedrijven' => $bedrijf]);
     }
 
     public function validateBedrijf(): array

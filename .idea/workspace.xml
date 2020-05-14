@@ -2,10 +2,16 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="1c0dd44e-5a88-4188-87c7-ec30a8829c7c" name="Default Changelist" comment="">
+
       <change afterPath="$PROJECT_DIR$/resources/views/login/loginBedrijven.blade.php" afterDir="false" />
       <change afterPath="$PROJECT_DIR$/resources/views/login/loginWerknemer.blade.php" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
       <change beforePath="$PROJECT_DIR$/resources/views/artikelen.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/artikelen.blade.php" afterDir="false" />
+
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app/Artikel.php" beforeDir="false" afterPath="$PROJECT_DIR$/app/Artikel.php" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/resources/views/werknemer/main.blade.php" beforeDir="false" afterPath="$PROJECT_DIR$/resources/views/werknemer/main.blade.php" afterDir="false" />
+
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -14,9 +20,7 @@
   </component>
   <component name="ComposerSettings" doNotAsk="true" synchronizationState="SYNCHRONIZE">
     <pharConfigPath>$PROJECT_DIR$/composer.json</pharConfigPath>
-    <execution>
-      <executable />
-    </execution>
+    <execution />
   </component>
   <component name="Git.Settings">
     <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
@@ -121,10 +125,10 @@
   <component name="ProjectId" id="1awDFSI1NTE519Vf0P4UPS37YqD" />
   <component name="ProjectViewState">
     <option name="hideEmptyMiddlePackages" value="true" />
-    <option name="showExcludedFiles" value="true" />
     <option name="showLibraryContents" value="true" />
   </component>
   <component name="PropertiesComponent">
+    <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="true" />
     <property name="last_opened_file_path" value="$PROJECT_DIR$" />
@@ -137,6 +141,9 @@
     <property name="nodejs_package_manager_path" value="npm" />
   </component>
   <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="E:\covid19project\covid-19_project_2\resources\views\werknemer" />
+    </key>
     <key name="CopyFile.RECENT_KEYS">
       <recent name="C:\laragon\www\covid-19_project_2" />
     </key>
@@ -162,17 +169,24 @@
       <workItem from="1587713207491" duration="5302000" />
       <workItem from="1588589216334" duration="599000" />
       <workItem from="1588834095811" duration="68000" />
+
       <workItem from="1588921551425" duration="4674000" />
       <workItem from="1589182009441" duration="1720000" />
       <workItem from="1589267148809" duration="1821000" />
       <workItem from="1589446226574" duration="3005000" />
+
+      <workItem from="1588922665021" duration="2018000" />
+      <workItem from="1589043831322" duration="217000" />
+      <workItem from="1589180582060" duration="9057000" />
+
     </task>
     <servers />
   </component>
   <component name="TypeScriptGeneratedFilesManager">
-    <option name="version" value="1" />
+    <option name="version" value="2" />
   </component>
   <component name="WindowStateProjectService">
+
     <state x="701" y="324" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1589454761465">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -181,10 +195,17 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="690" y="276" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588922757828" />
+
+    <state x="1170" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog" timestamp="1589187018580">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="1170" y="274" key="#com.jetbrains.php.actions.copyPaste.importReferences.PhpImportReferencesDialog/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1589187018580" />
+
     <state x="740" y="276" key="FileChooserDialogImpl" timestamp="1587640349233">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="740" y="276" key="FileChooserDialogImpl/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1587640349233" />
+
     <state x="794" y="444" key="NewPhpFileDialog" timestamp="1589454735929">
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
@@ -193,5 +214,16 @@
       <screen x="0" y="0" width="1920" height="1040" />
     </state>
     <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588923505623" />
+
+    <state x="794" y="443" key="NewPhpFileDialog" timestamp="1589185535030">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="794" y="443" key="NewPhpFileDialog/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1589185535030" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup" timestamp="1589188535039">
+      <screen x="0" y="0" width="1920" height="1040" />
+    </state>
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/-1920.0.1920.1040/0.0.1920.1040@0.0.1920.1040" timestamp="1588837727391" />
+    <state x="623" y="225" width="672" height="678" key="search.everywhere.popup/0.0.1920.1040/1920.0.1536.824@0.0.1920.1040" timestamp="1589188535039" />
+
   </component>
 </project>

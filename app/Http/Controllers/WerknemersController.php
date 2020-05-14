@@ -6,9 +6,17 @@ use Illuminate\Auth\Events\Validated;
 use Illuminate\Http\Request;
 use App\Werknemer;
 use App\Bedrijf;
+use App\Status;
+use App\Artikel;
 
 class WerknemersController extends Controller
 {
+    public function main($id){
+        $werknemer = Werknemer::find($id);
+        $status = Status::where('werknemers_id', $werknemer->id)->latest('datum')->first();
+        $artikelen = Artikel::where('bedrijf_id', $werknemer->bedrijf_id)->latest('datum')->get();
+        return view('werknemer.main', ["status" => $status, "artikelen" => $artikelen]);
+    }
     public function index(){
         //geef een lijst van werknemers
         $werknemers = Werknemer::latest()->get();
