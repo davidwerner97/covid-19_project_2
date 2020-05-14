@@ -36,7 +36,7 @@ Route::put('/werknemer/{werknemer}', 'WerknemersController@update')->name('werkn
 Route::get('/werknemer/{Werknemer}/','WerknemersController@show')->name('werknemer.show');
 
 // Artikelen routes - Gobi
-Route::get('/artikelen', 'ArtikelenController@index')->name('artikelen.single');
+Route::get('/artikelen', 'ArtikelenController@index')->name('artikelen.index');
 Route::post('/artikelen', 'ArtikelenController@store')->name('artiekelen.store');
 Route::get('/artikelen/create', 'ArtikelenController@create')->name('artikelen.create');
 Route::get('/artikelen/{artikel}', 'ArtikelenController@show')->name('artikelen.single');

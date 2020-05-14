@@ -10,10 +10,13 @@ class ArtikelenController extends Controller
 {
     public function index(){
         // Aanroepen view en lijst meegeven van de objecten
-
+/*
         $artikelen = Artikel::all();
 
-        return view('artikelen', ['artikelen' => $artikelen]);
+        return view('artikelen.index', ['artikelen' => $artikelen]);*/
+
+        $artikelen = Artikel::latest()->get();
+        return view('artikelen.index', ['artikelen' => $artikelen]);
     }
 
     public function show(Artikel $artikel){
