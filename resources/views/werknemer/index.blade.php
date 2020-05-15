@@ -1,58 +1,45 @@
 @extends('layout')
 @section('head')
-    <link href="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.css" rel="stylesheet">
-    <script src="https://unpkg.com/material-components-web@v4.0.0/dist/material-components-web.min.js"></script>
-    <link rel="stylesheet" href="https://fonts.googleapis.com/icon?family=Material+Icons">
     <style>
-        .mdc-card{
-            float:left;
-            background: #2b2b2b;
-        }
-        .card-text{
-            color:white;
-        }
-        .cards {
-            display: flex;
-            flex-wrap: wrap;
-        }
-        .element-card {
-            width: 20em;
-            margin: 16px;
-        }
-
-        .element-card > .mdc-card__media {
-            height: 9em;
-        }
-        .mdc-card__media{
-            text-align: left;
-            margin: 10px;
-
-        }
-        .mdc-card__media-content{
-            display: inline-block;
-        }
-        #content{
-            width: 100%;
-        }
+    /*.card-title, .card-text, .card-subtitle{*/
+    /*    color: black;*/
+    /*}*/
     </style>
 @endsection
 
 @section('inhoud')
-            <div id="content">
-                    @foreach ($werknemers as $werknemer)
-                    <div class="mdc-card element-card earth">
-                        <div class="mdc-card__media">
-                            <div class="mdc-card__media-content">
-                                <div class="mdc-typography--headline4 card-text">{{ $werknemer->vnaam .' ' . $werknemer->anaam }}</div>
-                                <div class="mdc-typography--headline9 card-text">{{ $werknemer->functie}}</div>
-                                <div class="mdc-typography--headline9 card-text">{{$werknemer->plaats. ' ' . $werknemer->postcode}}</div>
-                                <div class="mdc-typography--headline9 card-text">{{$werknemer->straat. ' ' . $werknemer->hnummer}}</div>
-                                <div class="mdc-typography--headline9 card-text">{{$werknemer->telnummer}}</div>
-                                <a href="{{$werknemer->path()}}" class="card-text"><i aria-hidden="true" class="material-icons mdc-button__icon"><!---->pageview<!----></i></a> <a href="{{$werknemer->deletepath()}}" class="card-text"><i aria-hidden="true" class="material-icons mdc-button__icon"><!---->delete<!----></i></a> <a href="{{$werknemer->editpath()}}" class="card-text"><i aria-hidden="true" class="material-icons mdc-button__icon"><!---->edit<!----></i></a>
+@php
+$i = 0
+@endphp
 
+                    @foreach ($werknemers as $werknemer)
+                        @php
+                        if($i == 0){echo '<div class="row">';}
+                        @endphp
+
+                        <div class="col-sm">
+
+
+                            <div class="card text-white bg-dark mb-3" style="width: 18rem;">
+                                <div class="card-body">
+                                    <h5 class="card-title">{{ $werknemer->vnaam .' ' . $werknemer->anaam }}</h5>
+                                    <h6 class="card-subtitle mb-2 text-muted">{{ $werknemer->functie}}</h6>
+                                    <p class="card-text">{{$werknemer->plaats. ' ' . $werknemer->postcode}}</p>
+                                    <p class="card-text">{{$werknemer->straat. ' ' . $werknemer->hnummer}}</p>
+                                    <p class="card-text">{{$werknemer->telnummer}}</p>
+                                    <a href="{{$werknemer->path()}}" class="card-link">view</a>
+                                    <a href="{{$werknemer->deletepath()}}" class="card-link">verwijder</a>
+                                    <a href="{{$werknemer->editpath()}}" class="card-link">bewerk</a>
+                                </div>
                             </div>
                         </div>
-                    </div>
+                        @php
+                            ++$i;
+   if($i == 3){echo '</div>';}
+
+   if($i == 3){$i = 0;}
+
+                        @endphp
                     @endforeach
-            </div>
+    
 @endsection
