@@ -33,7 +33,7 @@
 
 
     <div class="row frmAnimal">
-        <div class="col-lg-6">
+        <div class="col-lg-12">
 
             <div class="card text-white bg-dark">
                 <div class="card-body">
