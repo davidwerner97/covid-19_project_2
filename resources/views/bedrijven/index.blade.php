@@ -5,6 +5,11 @@
 @section('inhoud')
     <div id="content">
         <div class="row">
+            <div class="col-12">
+                <a href="/bedrijf/create/"><i aria-hidden="true" class="btn btn-primary">Maak nieuw bedrijf</i></a><br><br>
+            </div>
+        </div>
+        <div class="row">
             @foreach($bedrijven as $bedrijf)
                 <div class="col-3">
                     <div class="card text-white bg-dark mb-3">
