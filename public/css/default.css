@@ -955,3 +955,7 @@ ul.contact li a.icon-rss:before
 .btnDeleteArtikel{
     float: left;
 }
+
+.rowArtikelen{
+    width: 130%;
+}

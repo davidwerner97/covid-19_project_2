@@ -43,14 +43,14 @@
 
         <br>
 
-        <div class="row">
+        <div class="row rowArtikelen">
         @foreach ($artikelen as $artikel)
-            <div class="col-sm-6">
+            <div class="col-4">
                 <div class="card text-white bg-dark mb-3" style="width: 18rem;">
                     <div class="card-body">
                         <h5 class="card-title">{{ $artikel->titel }}</h5>
                         <i class="card-text">{{ $artikel->datum }}</i>
-                        <p class="card-text">{{ $artikel->inhoud }}</p>
+                        <p class="card-text"> {{ $artikel->inhoud }}</p>
                         <a href="/artikelen/{{ $artikel->id }}" class="btn btn-primary">Lees meer</a>
                     </div>
                 </div>
