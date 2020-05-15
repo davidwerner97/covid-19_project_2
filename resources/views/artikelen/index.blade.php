@@ -50,7 +50,7 @@
                     <div class="card-body">
                         <h5 class="card-title">{{ $artikel->titel }}</h5>
                         <i class="card-text">{{ $artikel->datum }}</i>
-                        <p class="card-text"> {{ $artikel->inhoud }}</p>
+                        <p class="card-text"> {{ Str::of($artikel->inhoud)->limit(120 ) }}</p>
                         <a href="/artikelen/{{ $artikel->id }}" class="btn btn-primary">Lees meer</a>
                     </div>
                 </div>
