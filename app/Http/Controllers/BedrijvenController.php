@@ -7,6 +7,13 @@ use Illuminate\Http\Request;
 
 class BedrijvenController extends Controller
 {
+    public function main($id){
+        $bedrijf = Bedrijf::find($id);
+        $status = Status::where('werknemers_id', $bedrijf->id)->latest('datum')->first();
+        $artikelen = Artikel::where('bedrijf_id', $bedrijf->bedrijf_id)->latest('datum')->get();
+        return view('bedrijven.main', ["status" => $status, "artikelen" => $artikelen]);
+    }
+
     public function index()
     {
         //geef een lijst van bedrijven
