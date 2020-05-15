@@ -7,8 +7,6 @@
 
 @section('inhoud')
 
-    <div id="row">
-        
         <form method="post" action="{{route('bedrijven.store')}}">
             @csrf
             <div class="field">
@@ -80,5 +78,4 @@
             <button type="submit">nieuw bedrijf maken</button>
         </form>
 
-    </div>
 @endsection
