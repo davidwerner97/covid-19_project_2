@@ -6,13 +6,13 @@
 @endsection
 
 @section('inhoud')
-    <div id="content">
+
+    <div id="row">
+        
         <form method="post" action="{{route('bedrijven.store')}}">
             @csrf
-
             <div class="field">
                 <label class="label" for="naam">naam bedrijf</label>
-
                 <div class="control">
                     <input class="input @error('naam') is-danger @enderror" type="text" name="naam" id="naam"
                            value="{{old('naam')}}">
@@ -34,7 +34,8 @@
             <div class="field">
                 <label class="label" for="postcode">postcode</label>
                 <div class="control">
-                    <input class="input @error('postcode') is-danger @enderror" type="text" name="postcode" id="postcode"
+                    <input class="input @error('postcode') is-danger @enderror" type="text" name="postcode"
+                           id="postcode"
                            value="{{old('postcode')}}">
                     @error('postcode')
                     <p class="alert is-danger">{{ $errors->first('postcode') }}</p>
@@ -76,9 +77,8 @@
             </div>
 
             <br>
-            <input type="submit">
-
+            <button type="submit">nieuw bedrijf maken</button>
         </form>
-    </div>
 
+    </div>
 @endsection
