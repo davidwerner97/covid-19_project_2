@@ -15,6 +15,7 @@ use Illuminate\Support\Facades\Route;
 
 //main page routes
 Route::get('/main/werknemer/{werknemer}','WerknemersController@main')->name('werknemer.main');
+Route::get('/main/bedrijf/{bedrijf}', 'BedrijvenContoller@main')->name('bedrijven.main');
 
 //status routes
 Route::get('/status/', 'StatusesController@index')->name('status.index');
