@@ -3,16 +3,20 @@
 namespace App\Http\Controllers;
 
 use App\Artikel;
+use App\Bedrijf;
 use Illuminate\Http\Request;
 
 class ArtikelenController extends Controller
 {
     public function index(){
         // Aanroepen view en lijst meegeven van de objecten
-
+/*
         $artikelen = Artikel::all();
 
-        return view('artikelen', ['artikelen' => $artikelen]);
+        return view('artikelen.index', ['artikelen' => $artikelen]);*/
+
+        $artikelen = Artikel::latest()->get();
+        return view('artikelen.index', ['artikelen' => $artikelen]);
     }
 
     public function show(Artikel $artikel){
@@ -23,22 +27,32 @@ class ArtikelenController extends Controller
 
     public function create(){
         // Aanroepen view (bijv. create.blade.php) om een nieuw object te maken
-
-        return view('artikelen.create');
+        $bedrijven = Bedrijf::pluck('naam','id');
+        return view('artikelen.create',compact('bedrijven'));
     }
 
-    public function store(){
+    public function store(Artikel $artikel){
         // Opslaan nieuw object in de database.
+        /*$art = Artikel::create($this->validateArtikelen());
+        var_dump($art);
+        die();
+        $artikelen = Artikel::all();*/
 
         Artikel::create($this->validateArtikelen());
+        $artikelen = Artikel::latest()->get();
 
-        return redirect('/artikelen');
+
+//        return redirect();
+        return view('artikelen.single', ['artikelen' => $artikelen]);
+
+//        return redirect('/artikelen');
     }
 
     public function edit(Artikel $artikel){
         // Aanroepen view (bijv. edit.blade.php) om object te wijzigen
 
         return view('artikelen.edit', ['artikel' => $artikel]);
+
     }
 
     public function update(Artikel $artikel){
@@ -55,15 +69,15 @@ class ArtikelenController extends Controller
         $artikel->delete();
 
         return redirect('/artikelen');
-
     }
 
-    protected function validateArtikelen()
+    protected function validateArtikelen() : array
     {
-        return \request()->validate([
+        return request()->validate([
             'titel' => 'required',
             'inhoud' => 'required',
-            'datum' => 'required'
+            'datum' => 'required',
+            'bedrijf_id' => 'required'
         ]);
     }
 }

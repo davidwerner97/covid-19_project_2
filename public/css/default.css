@@ -54,7 +54,7 @@ a:hover
 
 .container
 {
-	margin: 0px 0px 70px auto;
+	margin: 0px 0px 70px 25%;
 	width: 1200px;
 }
 
@@ -364,7 +364,7 @@ ul.contact li a.icon-rss:before
 /*********************************************************************************/
 /* Header                                                                        */
 /*********************************************************************************/
-	
+
 #header-wrapper
 {
 	background: white url(../images/banner.jpg) repeat center;
@@ -476,7 +476,7 @@ ul.contact li a.icon-rss:before
 /*********************************************************************************/
 /* Banner                                                                        */
 /*********************************************************************************/
-	
+
 
 	#header-featured
 	{
@@ -946,4 +946,16 @@ ul.contact li a.icon-rss:before
 .extra2 .ebox2
 {
 	float: right;
+}
+
+.btnCreateArtikel{
+    color: white;
+}
+
+.btnDeleteArtikel{
+    float: left;
+}
+
+.rowArtikelen{
+    width: 130%;
 }
